@@ -1,0 +1,31 @@
+name: Build and Commit LaTeX PDF
+
+on: [push, pull_request]
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # Needed to push
+
+      - name: Set up LaTeX
+        uses: Sakul6499/GitHub-Action-LaTeX@v1.0.0
+        with:
+          latex_main_file: main.tex
+
+      - name: Rename output to resume.pdf
+        run: mv main.pdf resume.pdf
+
+      - name: Commit and push PDF
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf
+          git commit -m "Auto-compile and update resume.pdf"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
