@@ -29,7 +29,7 @@
 \usepackage[T1]{fontenc}
 \setlength{\multicolsep}{0pt} 
 \pagestyle{fancy}
-\fancyhf{} 
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -55,6 +55,7 @@
 }
 
 \urlstyle{same}
+
 \raggedright
 \setlength{\tabcolsep}{0in}
 
@@ -132,12 +133,12 @@
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
 \newcommand{\name}{Vignesh Thanigaivel} % Your Name
-\newcommand{\course}{26-03-2004} % Your Program
 \newcommand{\roll}{B.tech Electronics and Communications} % Your Roll No.
-\newcommand{\phone}{vigneshta.com (Portfolio)}
+\newcommand{\phone}{Portfolio: vigneshta.com}
 \newcommand{\emaila}{contact@vigneshta.com}
-\newcommand{\emailb}{tavignesh (200+Streak)} %Email 2
+\newcommand{\emailb}{leetcode.com/u/tavignesh (200+Streak)} %Email 2
 
 
 
@@ -152,10 +153,9 @@
 \parbox{\dimexpr\linewidth-2.8cm\relax}{
 \begin{tabularx}{\linewidth}{L r} \\
   \textbf{\Large \name} & \href{https://vigneshta.com}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ \phone}\\
-  {\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
-  {Date of Birth: \course} &  \href{https://leetcode.com/u/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faCode}\ {\emailb}}\\
-  {Phone: +91 8300829502} &  \href{https://github.com/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {tavignesh}} \\
-  {Email: vigneshta004@gmail.com } & \href{https://www.linkedin.com/in/tavignesh}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {tavignesh}}
+  {\roll} & \href{https://leetcode.com/u/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faCode}\ {\emailb}} \\
+  {Phone: +91 8300829502} &  \href{https://github.com/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/tavignesh}} \\
+  {Email: vigneshta004@gmail.com } & \href{https://www.linkedin.com/in/tavignesh}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {linkedin.com/in/tavignesh}}
 \end{tabularx}
 }
 
@@ -211,12 +211,12 @@
             \resumeItemListEnd
         \vspace{-3mm}
         \resumeProjectCompact
-            { Real-Time Proximity Voice Interaction Platform Using WebRTC, Socket.IO, and Phaser} %Project Name
-            {\href{https://vigneshta.com/projects/chatopia}{Learn More}}
+            { Modular Python Discord Bot with MongoDB Integration and External API Support} %Project Name
+            {\href{https://vigneshta.com/projects/discord-bot}{Learn More}}
         
             \resumeItemListStart
-                \item {Developed a browser-based spatial voice chat platform enabling proximity-based audio using WebRTC for P2P communication, Socket.IO for real-time avatar state sync, and Phaser 3 for 2D movement.}
-                \item {Tools \& technologies used: JavaScript, WebRTC, Socket.IO, Phaser, Node.js, HTML5}
+                \item {Built a scalable, modular Discord bot in Python featuring dynamic user commands, role management, and real-time interactions via multiple external APIs and MongoDB-based persistence.}
+                \item {Tools \& technologies used: Python, Discord.py, MongoDB, REST APIs, Asynchronous Programming}
             \resumeItemListEnd
             \vspace{-3mm}
         \item \href{https://vigneshta.com/projects}{ For more Projects - vigneshta.com/projects [LINK]}
