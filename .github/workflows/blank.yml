@@ -21,7 +21,7 @@ jobs:
       - name: Rename output
         run: mv main.pdf resume.pdf
 
-      - name: Push PDF to secondary repo
+      - name: Push PDF to the website repo
         run: |
           git clone https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/tavignesh/vigneshta.com.git
           cd vigneshta.com
