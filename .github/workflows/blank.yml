@@ -24,7 +24,7 @@ jobs:
       - name: Push PDF to secondary repo
         run: |
           git clone https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/tavignesh/vigneshta.com.git
-          cd TARGET_REPO
+          cd vigneshta.com
           cp ../resume.pdf .
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
