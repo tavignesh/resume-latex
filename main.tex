@@ -1,0 +1,305 @@
+%-------------------------
+% Resume in Latex
+% Author: Vignesh.T.A (https://vigneshta.com)
+% License : MIT
+%------------------------
+
+%---- Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} 
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProjectCompact}[2]{
+  \vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#2}} \\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+\newcommand{\name}{Vignesh Thanigaivel} % Your Name
+\newcommand{\course}{26-03-2004} % Your Program
+\newcommand{\roll}{B.tech Electronics and Communications} % Your Roll No.
+\newcommand{\phone}{vigneshta.com (Portfolio)}
+\newcommand{\emaila}{contact@vigneshta.com}
+\newcommand{\emailb}{tavignesh (200+Streak)} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2.35cm,clip]{v.png}}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & \href{https://vigneshta.com}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ \phone}\\
+  {\roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  {Date of Birth: \course} &  \href{https://leetcode.com/u/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faCode}\ {\emailb}}\\
+  {Phone: +91 8300829502} &  \href{https://github.com/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {tavignesh}} \\
+  {Email: vigneshta004@gmail.com } & \href{https://www.linkedin.com/in/tavignesh}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {tavignesh}}
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology, Vellore}{CGPA: 8.04}
+      {B.tech Electronics and Communication Engineering with specialization in Biomedical Engineering}{2026}
+    \resumeSubheading
+      {Atomic Energy Central School, Anupuram}{Percentage: 93.6}
+      {Central Board of Secondary Education (CBSE)}{2022}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, RUST, C, SQL, HTML, CSS, Assembly, Verilog, Matlab, R, Java, C++, Javascript} \\
+     \textbf{Frameworks \& Libraries}{: AWS, LangChain, ChromaDB, Ollama, RAG, NoSQL - MongoDB, Nginx, RestAPI, Docker, WebRTC, Socket.IO, Git, Django, MultiThreading, OOPs, Discord.py} \\
+     \textbf{Misc.}{: Data Structures \& Algorithms, Server Designing and Load Management, Object Oriented Programming, Git} \\
+     \textbf{Soft Skills}{: Public Speaking, Delegation, Collaboration, Diligence, Result Oriented, Flexible} \\
+     \textbf{Languages}{: English, Hindi, Tamil, German} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+%-----------PROJECTS-----------------
+\section{\href{https://vigneshta.com/projects}{\textbf{Personal Projects }[LINK]}}
+\resumeSubHeadingListStart
+
+    \resumeProjectCompact
+        { Scalable Linked NGINX RTMP-Based Multi-Endpoint Live Video Restreaming System} % Project Name
+        {\href{https://vigneshta.com/projects/nginx-rtmp}{Learn More}} 
+
+        \resumeItemListStart
+            \item {Designed and deployed a scalable live streaming system using NGINX with RTMP for adaptive stream replication, dynamic multi-endpoint delivery, and optimized failover—ensuring high performance under heavy viewer load.}
+            \item {Tools \& technologies used: NGINX, FFmpeg, RTMP, Linux, Shell Scripting}
+        \resumeItemListEnd
+        \vspace{-3mm}
+            
+        \resumeProjectCompact
+            { Real-Time Proximity Voice Interaction Platform Using WebRTC, Socket.IO, and Phaser} %Project Name
+            {\href{https://vigneshta.com/projects/chatopia}{Learn More}}
+        
+            \resumeItemListStart
+                \item {Developed a browser-based spatial voice chat platform enabling proximity-based audio using WebRTC for P2P communication, Socket.IO for real-time avatar state sync, and Phaser 3 for 2D movement.}
+                \item {Tools \& technologies used: JavaScript, WebRTC, Socket.IO, Phaser, Node.js, HTML5}
+            \resumeItemListEnd
+        \vspace{-3mm}
+        \resumeProjectCompact
+            { Real-Time Proximity Voice Interaction Platform Using WebRTC, Socket.IO, and Phaser} %Project Name
+            {\href{https://vigneshta.com/projects/chatopia}{Learn More}}
+        
+            \resumeItemListStart
+                \item {Developed a browser-based spatial voice chat platform enabling proximity-based audio using WebRTC for P2P communication, Socket.IO for real-time avatar state sync, and Phaser 3 for 2D movement.}
+                \item {Tools \& technologies used: JavaScript, WebRTC, Socket.IO, Phaser, Node.js, HTML5}
+            \resumeItemListEnd
+            \vspace{-3mm}
+        \item \href{https://vigneshta.com/projects}{ For more Projects - vigneshta.com/projects [LINK]}
+        \vspace{-3mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+%-----------EXPERIENCE-----------------
+\section{\href{https://vigneshta.com/timeline}{\textbf{Work Experience}}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      { Indira Gandhi Centre for Atomic Research [IGCAR]}{Kalpakkam, Tamil Nadu}
+      {Wireless Sensor Networks (Offline Internship)}{Jun. 2024 - Jul. 2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Designed a wireless packet loss testing system using 25 Zigbee modules and a SAMD20 Cortex M0+ MCU, applying IEEE protocols, ADCs, and embedded system design across 8-bit to DSP microcontrollers.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      { RC Studios}{Coimbatore , Tamil Nadu}
+      {Server Design \& Administration (Hybrid Internship)}{Jul. 2024 - Aug. 2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Engineered an Nginx-based Linux streaming server with FFmpeg for multi-resolution RTMP output and HLS playback, incorporating load management strategies to ensure stable performance under high concurrent traffic.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      { Freelance}{ }
+      {Server Administrator (Hybrid)}{Jun. 2023 - Present}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Executed \& supervised high-integrity server deployments implementing advanced load balancing while ensuring compliance with strict validation protocols and infrastructure performance benchmarks.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    \resumeSubheading
+      { Freelance}{ }
+      {Website Design (Online)}{Mar. 2023}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Architected, deployed, and maintained secure web infrastructures, integrating SSL, HTTP server configurations, DNS management, and backend database systems to ensure robust and scalable online platforms.}
+    \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Publications}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Cloud-Controlled Dynamic Smart Street Lighting System} 
+      {2023 International Conference on Next Generation Electronics (NEleX)}
+      {16 Feb. 2024}
+
+      \resumeItemListStart
+        \href{https://vigneshta.com/publication/smart-street}{DOI: 10.1109/NEleX59773.2023.10420861 [LINK]}
+    \resumeItemListEnd
+    \vspace{-2mm}
+
+    \resumeProject
+      {IoT and Cloud based Automated Irrigation System} 
+      {2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)}
+      {02 Jul. 2024}
+
+      \resumeItemListStart
+        \href{https://vigneshta.com/publication/cloud-irrigation}{DOI: 10.1109/AIIoT58432.2024.10574611 [LINK]}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%-------------------------------------------
+\end{document}
