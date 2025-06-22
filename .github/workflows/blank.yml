@@ -1,4 +1,4 @@
-name: Build and Push LaTeX PDF to Another Repo
+name: Build and Push LaTeX PDF to This and Another Repo
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source repo
+      - name: Checkout current repo
         uses: actions/checkout@v3
 
       - name: Compile LaTeX
@@ -21,13 +21,23 @@ jobs:
       - name: Rename output
         run: mv main.pdf resume.pdf
 
-      - name: Push PDF to the website repo
+      # Commit resume.pdf to THIS repository
+      - name: Commit PDF to this repo
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add resume.pdf
+          git commit -m "Update resume.pdf" || echo "No changes to commit"
+          git push
+
+      # Push resume.pdf to ANOTHER repository
+      - name: Push PDF to website repo
         run: |
           git clone https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/tavignesh/vigneshta.com.git
           cd vigneshta.com
-          cp ../resume.pdf .
+          cp ../resume.pdf ./
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add resume.pdf
-          git commit -m "Update resume.pdf from build"
+          git commit -m "Update resume.pdf from LaTeX build" || echo "No changes to commit"
           git push
