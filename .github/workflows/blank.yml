@@ -1,13 +1,16 @@
-name: Build and Commit LaTeX PDF
+name: Build and Push LaTeX PDF to Another Repo
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout source repo
         uses: actions/checkout@v3
 
       - name: Compile LaTeX
@@ -15,15 +18,16 @@ jobs:
         with:
           root_file: main.tex
 
-      - name: Rename output to resume.pdf
+      - name: Rename output
         run: mv main.pdf resume.pdf
 
-      - name: Commit and push PDF
+      - name: Push PDF to secondary repo
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git clone https://x-access-token:${{ secrets.TARGET_REPO_PAT }}@github.com/tavignesh/vigneshta.com.git
+          cd TARGET_REPO
+          cp ../resume.pdf .
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add resume.pdf
-          git commit -m "Auto-compile and update resume.pdf"
+          git commit -m "Update resume.pdf from build"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
