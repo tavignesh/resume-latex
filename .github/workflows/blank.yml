@@ -9,13 +9,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-        with:
-          persist-credentials: true  # Needed to push
 
-      - name: Set up LaTeX
-        uses: Sakul6499/GitHub-Action-LaTeX@v1.0.0
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v2
         with:
-          latex_main_file: main.tex
+          root_file: main.tex
 
       - name: Rename output to resume.pdf
         run: mv main.pdf resume.pdf
