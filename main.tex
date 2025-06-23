@@ -27,6 +27,7 @@
 \usepackage{graphicx}
 \usepackage{cfr-lm}
 \usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
 \setlength{\multicolsep}{0pt} 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -138,7 +139,7 @@
 \newcommand{\roll}{B.tech Electronics and Communications} % Your Roll No.
 \newcommand{\phone}{Portfolio: vigneshta.com}
 \newcommand{\emaila}{contact@vigneshta.com}
-\newcommand{\emailb}{leetcode.com/u/tavignesh (200+Streak)} %Email 2
+\newcommand{\emailb}{leetcode.com/u/tavignesh (200+Streak)}
 
 
 
@@ -151,8 +152,8 @@
 \parbox{2.35cm}{%
 \includegraphics[width=2.35cm,clip]{v.png}}
 \parbox{\dimexpr\linewidth-2.8cm\relax}{
-\begin{tabularx}{\linewidth}{L r} \\
-  \textbf{\Large \name} & \href{https://vigneshta.com}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ \phone}\\
+\begin{tabularx}{\linewidth}{L r} 
+  \textbf{\Large \name} & \href{https://vigneshta.com}{\raisebox{0.0\height}{\footnotesize \faGlobe}\ {\phone}}\\
   {\roll} & \href{https://leetcode.com/u/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faCode}\ {\emailb}} \\
   {Phone: +91 8300829502} &  \href{https://github.com/tavignesh/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {github.com/tavignesh}} \\
   {Email: vigneshta004@gmail.com } & \href{https://www.linkedin.com/in/tavignesh}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {linkedin.com/in/tavignesh}}
@@ -179,21 +180,21 @@
 \section{\textbf{Technical Skills}}
  \begin{itemize}[leftmargin=0.05in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, RUST, C, SQL, HTML, CSS, Assembly, Verilog, Matlab, R, Java, C++, Javascript} \\
-     \textbf{Frameworks \& Libraries}{: AWS, LangChain, ChromaDB, Ollama, RAG, NoSQL - MongoDB, Nginx, RestAPI, Docker, WebRTC, Socket.IO, Git, Django, MultiThreading, OOPs, Discord.py} \\
-     \textbf{Misc.}{: Data Structures \& Algorithms, Server Designing and Load Management, Object Oriented Programming, Git} \\
+     \textbf{Programming Languages}{: Python, Rust, C, SQL, HTML, CSS, Assembly, Verilog, Matlab, R, Java, C++, JavaScript} \\
+     \textbf{Frameworks \& Libraries}{: AWS, LangChain, ChromaDB, Ollama, RAG, NoSQL - MongoDB, Nginx, REST API, Docker, WebRTC, Socket.IO, Django, Discord.py} \\
+     \textbf{Additional Proficiencies}{: Data Structures and Algorithms, Server Design and Load Management, Multi-threading, OOP, Version Control (Git)} \\
      \textbf{Soft Skills}{: Public Speaking, Delegation, Collaboration, Diligence, Result Oriented, Flexible} \\
-     \textbf{Languages}{: English, Hindi, Tamil, German} \\
+     \textbf{Languages}{: English, Hindi, Tamil, German}
     }}
  \end{itemize}
  \vspace{-16pt}
 %-----------PROJECTS-----------------
-\section{\href{https://vigneshta.com/projects}{\textbf{Personal Projects }[LINK]}}
+\section{\href{https://vigneshta.com/projects}{\textbf{Personal Projects }}}
 \resumeSubHeadingListStart
 
     \resumeProjectCompact
         { Scalable Linked NGINX RTMP-Based Multi-Endpoint Live Video Restreaming System} % Project Name
-        {\href{https://vigneshta.com/projects/nginx-rtmp}{Learn More}} 
+        {\href{https://vigneshta.com/projects/nginx-rtmp}{[Project Link]}} 
 
         \resumeItemListStart
             \item {Designed and deployed a scalable live streaming system using NGINX with RTMP for adaptive stream replication, dynamic multi-endpoint delivery, and optimized failover—ensuring high performance under heavy viewer load.}
@@ -203,7 +204,7 @@
             
         \resumeProjectCompact
             { Real-Time Proximity Voice Interaction Platform Using WebRTC, Socket.IO, and Phaser} %Project Name
-            {\href{https://vigneshta.com/projects/chatopia}{Learn More}}
+            {\href{https://vigneshta.com/projects/chatopia}{[Project Link]}}
         
             \resumeItemListStart
                 \item {Developed a browser-based spatial voice chat platform enabling proximity-based audio using WebRTC for P2P communication, Socket.IO for real-time avatar state sync, and Phaser 3 for 2D movement.}
@@ -212,7 +213,7 @@
         \vspace{-3mm}
         \resumeProjectCompact
             { Modular Python Discord Bot with MongoDB Integration and External API Support} %Project Name
-            {\href{https://vigneshta.com/projects/discord-bot}{Learn More}}
+            {\href{https://vigneshta.com/projects/discord-bot}{[Project Link]}}
         
             \resumeItemListStart
                 \item {Built a scalable, modular Discord bot in Python featuring dynamic user commands, role management, and real-time interactions via multiple external APIs and MongoDB-based persistence.}
