@@ -180,10 +180,10 @@
 \section{\textbf{Technical Skills}}
  \begin{itemize}[leftmargin=0.05in, label={}]
     \small{\item{
-     \textbf{Programming Languages}{: Python, Rust, C, SQL, HTML, CSS, Assembly, Verilog, Matlab, R, Java, C++, JavaScript} \\
-     \textbf{Frameworks \& Libraries}{: AWS, LangChain, ChromaDB, Ollama AI, RAG, NoSQL - MongoDB, Nginx, REST API, Docker, WebRTC, Socket.IO, Django, Discord.py} \\
-     \textbf{Additional Proficiencies}{: Data Structures and Algorithms, Server Design and Load Management, Multi-threading, OOP, Version Control (Git)} \\
-     \textbf{Soft Skills}{: Public Speaking, Delegation, Collaboration, Diligence, Result Oriented, Flexible} \\
+     \textbf{Programming Languages}{: Python, Rust, C, SQL, HTML, CSS, Assembly, Verilog, Matlab, R, Java, C++, JavaScript} \\ \vspace{3pt}
+     \textbf{Frameworks \& Libraries}{: AWS, LangChain, ChromaDB, Ollama AI, RAG, NoSQL - MongoDB, Nginx, REST API, Docker, WebRTC, Socket.IO, Django, Discord.py} \\ \vspace{3pt}
+     \textbf{Additional Proficiencies}{: Data Structures and Algorithms, Server Design and Load Management, Multi-threading, OOP, Version Control (Git)} \\ \vspace{3pt}
+     \textbf{Soft Skills}{: Public Speaking, Delegation, Collaboration, Diligence, Result Oriented, Flexible} \\ \vspace{3pt}
      \textbf{Languages}{: English, Hindi, Tamil, German}
     }}
  \end{itemize}
@@ -194,10 +194,12 @@
 
     \resumeProjectCompact
         { Scalable Linked NGINX RTMP-Based Multi-Endpoint Live Video Restreaming System} % Project Name
-        {\href{https://vigneshta.com/projects/nginx-rtmp}{[Project Link]}} 
+        {\href{https://vigneshta.com/projects/nginx-server}{[Project Link]}} 
 
         \resumeItemListStart
-            \item {Designed and deployed a scalable live streaming system using NGINX with RTMP for adaptive stream replication, dynamic multi-endpoint delivery, and optimized failover—ensuring high performance under heavy viewer load.}
+            \item {Engineered a scalable RTMP restreaming pipeline using NGINX and the RTMP module for real-time adaptive live stream replication.}
+            \item {Deployed custom CDN cache nodes to distribute video streams efficiently across edge servers, reducing server load.}
+            \item {Emphasized low-latency routing, load balancing, and modular configuration for fault-tolerant, infrastructure-grade stream delivery.}
             \item {Tools \& technologies used: NGINX, FFmpeg, RTMP, Linux, Shell Scripting}
         \resumeItemListEnd
         \vspace{-3mm}
@@ -207,8 +209,9 @@
             {\href{https://vigneshta.com/projects/chatopia}{[Project Link]}}
         
             \resumeItemListStart
-                \item {Developed a browser-based spatial voice chat platform enabling proximity-based audio using WebRTC for P2P communication, Socket.IO for real-time avatar state sync, and Phaser 3 for 2D movement.}
-                \item {Tools \& technologies used: JavaScript, WebRTC, Socket.IO, Phaser, Node.js, HTML5}
+                \item {Developed a browser-based spatial voice chat platform using WebRTC for P2P communication, Socket.IO for real-time avatar state sync, and Phaser 3 for 2D movement.}
+                \item {Enabled automatic voice connection based on real-time avatar proximity, enhancing user interaction in virtual spaces.}
+                \item {Tools \& technologies used: Python, JavaScript, WebRTC, Socket.IO, Phaser, HTML5}
             \resumeItemListEnd
         \vspace{-3mm}
         \resumeProjectCompact
@@ -216,11 +219,24 @@
             {\href{https://vigneshta.com/projects/discord-bot}{[Project Link]}}
         
             \resumeItemListStart
-                \item {Built a scalable, modular Discord bot in Python featuring dynamic user commands, role management, and real-time interactions via multiple external APIs and MongoDB-based persistence.}
-                \item {Tools \& technologies used: Python, Discord.py, MongoDB, REST APIs, Asynchronous Programming}
+                \item {Built a scalable, modular Discord bot in Python featuring dynamic user commands, role management, and real-time interactions.}
+                \item {Integrated MongoDB for persistent configuration and used external APIs for features like content delivery and live info retrieval.}
+                \item {Tools \& technologies used: Python MongoDB, REST APIs, Discord.py, Asynchronous Programming}
             \resumeItemListEnd
             \vspace{-3mm}
-        \item \href{https://vigneshta.com/projects}{ For more Projects - vigneshta.com/projects [LINK]}
+
+        \resumeProjectCompact
+            { Offline AI Summarization \& Q/A System (LangGraph + Ollama)} %Project Name
+            {\href{https://vigneshta.com/projects/agentic-ai}{[Project Link]}}
+        
+            \resumeItemListStart
+                \item {Built a fully offline, context-aware summarization and Q/A system using LangGraph with locally hosted LLMs via Ollama.}
+                \item {Designed modular agentic workflows with supervisor coordination, supporting summarization, document-level Q/A, and follow-up conversations using chat-style prompting.}
+                \item {Enabled flexible processing of diverse documents with token-efficient chunking, offline retrieval, and dynamic flow control—all without requiring internet access.}
+                \item {Tools \& technologies used: Python MongoDB, REST APIs, Discord.py, Asynchronous Programming}
+            \resumeItemListEnd
+            \vspace{-3mm}
+        \item \href{https://vigneshta.com/projects}{ For more Projects - vigneshta.com/projects [Link]}
         \vspace{-3mm}
     
       
@@ -236,7 +252,9 @@
       {Wireless Sensor Networks (Offline Internship)}{Jun. 2024 - Jul. 2024}
       \vspace{-2.0mm}
       \resumeItemListStart
-    \item {Designed a wireless packet loss testing system using 25 Zigbee modules and a SAMD20 Cortex M0+ MCU, applying IEEE protocols, ADCs, and embedded system design across 8-bit to DSP microcontrollers.}
+    \item {Designed and deployed a packet loss testing system using 25 Zigbee modules arranged in a dynamic mesh topology.}
+    \item {Programmed SAMD20 Cortex-M0+ microcontrollers using Keil IDE and ADCs to analyze communication reliability under varying conditions.}
+    \item {Applied IEEE 802.15.4 protocols, embedded system design principles, and multi-core architecture experience (8-bit to DSP).}
     \resumeItemListEnd
     
     \vspace{-3.0mm}
@@ -246,7 +264,9 @@
       {Server Design \& Administration (Hybrid Internship)}{Jul. 2024 - Aug. 2024}
       \vspace{-2.0mm}
       \resumeItemListStart
-    \item {Engineered an Nginx-based Linux streaming server with FFmpeg for multi-resolution RTMP output and HLS playback, incorporating load management strategies to ensure stable performance under high concurrent traffic.}
+    \item {Built a scalable streaming server infrastructure using NGINX and FFmpeg, supporting multi-resolution RTMP output and adaptive HLS playback.}
+    \item {Implemented load distribution and stream handling strategies to ensure reliable performance under high concurrent traffic.} 
+    \item {Focused on system-level optimization, real-time video routing, and efficient resource management for seamless content delivery.}
     \resumeItemListEnd
     
     \vspace{-3.0mm}
@@ -256,50 +276,81 @@
       {Server Administrator (Hybrid)}{Jun. 2023 - Present}
       \vspace{-2.0mm}
       \resumeItemListStart
-    \item {Executed \& supervised high-integrity server deployments implementing advanced load balancing while ensuring compliance with strict validation protocols and infrastructure performance benchmarks.}
+    \item {Planned, deployed, and maintained production-grade servers across hybrid environments, ensuring high availability and fault tolerance.}
+    \item {Implemented load balancing, traffic shaping, and monitoring solutions to optimize infrastructure under varying workloads.}
+    \item {Ensured compliance with security standards, validation protocols, and performance benchmarks for robust, scalable deployment.}
     \resumeItemListEnd
     
     \vspace{-3.0mm}
     
     \resumeSubheading
       { Freelance}{ }
-      {Website Design (Online)}{Mar. 2023}
+      {Web Design (Online)}{Mar. 2023}
       \vspace{-2.0mm}
       \resumeItemListStart
-    \item {Architected, deployed, and maintained secure web infrastructures, integrating SSL, HTTP server configurations, DNS management, and backend database systems to ensure robust and scalable online platforms.}
+    \item {Designed and hosted secure, scalable web infrastructures with focus on full-stack reliability and performance.}
+    \item {Integrated SSL/TLS encryption, custom HTTP server configs, and DNS management for secure domain handling.}
     \resumeItemListEnd
       
   \resumeSubHeadingListEnd
 \vspace{-8.5mm}
 
+%-----------Certification-----------
+\section{\textbf{Certifications \& Achievements}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/rag-agentic}{ RAG and Agentic AI Professional}}{2025}
+      {IBM}{\href{https://vigneshta.com/certification/rag-agentic}{View Credential}}
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/genai-microsoft}{ Career Essentials in Generative AI}}{2025}
+      {Microsoft}{\href{https://vigneshta.com/certification/genai-microsoft}{View Credential}}
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/github-pro}{ Career Essentials in GitHub Professional}}{2025}
+      {GitHub}{\href{https://vigneshta.com/certification/github-pro}{View Credential}}
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/ibm-cloud}{ IBM Cloud}}{2025}
+      {IBM}{\href{https://vigneshta.com/certification/ibm-cloud}{View Credential}}
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/rust-fundamentals}{ Rust Fundamentals}}{2025}
+      {Duke University}{\href{https://vigneshta.com/certification/rust-fundamentals}{View Credential}}
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/genai-google}{ Introduction to Generative AI}}{2024}
+      {Google}{\href{https://vigneshta.com/certification/genai-google}{View Credential}}
+    \resumeSubheading
+      {\href{https://vigneshta.com/certification/python-data}{ Python for Data Science}}{2023}
+      {IIT Madras}{\href{https://vigneshta.com/certification/python-data}{View Credential}}
+    \item \href{https://vigneshta.com/certification}{ For more Certifications - vigneshta.com/certification [Link]}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
 
-
-%-----------PROJECTS-----------------
+%-----------PUblications-----------------
 \section{\textbf{Publications}}
 \resumeSubHeadingListStart
 
     \resumeProject
-      {Cloud-Controlled Dynamic Smart Street Lighting System} 
+      {\href{https://vigneshta.com/publications}{Cloud-Controlled Dynamic Smart Street Lighting System}} 
       {2023 International Conference on Next Generation Electronics (NEleX)}
       {16 Feb. 2024}
 
       \resumeItemListStart
-        \href{https://vigneshta.com/publication/smart-street}{DOI: 10.1109/NEleX59773.2023.10420861 [LINK]}
+        \href{https://vigneshta.com/publications/smart-street}{DOI: 10.1109/NEleX59773.2023.10420861 [Link]}
     \resumeItemListEnd
     \vspace{-2mm}
-
+ 
     \resumeProject
-      {IoT and Cloud based Automated Irrigation System} 
+      {\href{https://vigneshta.com/publications}{IoT and Cloud based Automated Irrigation System}} 
       {2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)}
       {02 Jul. 2024}
 
       \resumeItemListStart
-        \href{https://vigneshta.com/publication/cloud-irrigation}{DOI: 10.1109/AIIoT58432.2024.10574611 [LINK]}
+        \href{https://vigneshta.com/publications/cloud-irrigation}{DOI: 10.1109/AIIoT58432.2024.10574611 [Link]}
     \resumeItemListEnd
     \vspace{-2mm}
     
       
   \resumeSubHeadingListEnd
 \vspace{-5.5mm}
+
 %-------------------------------------------
 \end{document}
